@@ -1,4 +1,55 @@
-*{
+* {
     padding: 0;
     margin: 0;
+}
+/* Mobil-css */
+body {
+    height: 200vh;
+}
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 15fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "he"
+    "as"
+    "ma"
+    "fo";
+}
+header {
+    grid-area: he;
+    background-color: orange;
+}
+nav {
+    display: none;
+}
+aside {
+    grid-area: as;
+    background-color: green;
+}
+main {
+    grid-area: ma;
+    background-color: cyan;
+}
+footer {
+    grid-area: fo;
+    background-color: hotpink;
+}
+/* Desktop och större skärmar */
+@media screen and (min-width: 992px) {
+    .wrapper {
+        grid-template-rows: 1fr 1fr 1fr 15fr 1fr;
+        grid-template-areas:
+        "he"
+        "na"
+        "as"
+        "ma"
+        "fo";
+    }
+    nav {
+        grid-area: na;
+        display: block;
+        background-color: lightgray;
+    }
 }
