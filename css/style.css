@@ -20,6 +20,13 @@ body {
 header {
     grid-area: he;
     background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 55%;
+}
+header img {
+    height: 60%;
 }
 nav {
     display: none;
@@ -51,5 +58,8 @@ footer {
         grid-area: na;
         display: block;
         background-color: lightgray;
+    }
+    header img {
+        height: 80%;
     }
 }
