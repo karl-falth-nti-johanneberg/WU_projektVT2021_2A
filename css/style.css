@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap');
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Comfortaa', cursive;
 }
 /* Mobil-css */
 body {
@@ -41,7 +43,14 @@ main {
 }
 footer {
     grid-area: fo;
+    display: flex;
     background-color: hotpink;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5%;
+}
+#contact_us {
+    list-style: none ;
 }
 /* Desktop och större skärmar */
 @media screen and (min-width: 992px) {
