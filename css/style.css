@@ -23,12 +23,16 @@ header {
     grid-area: he;
     background-color: orange;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    padding-left: 55%;
+    width: 100%;
 }
-header img {
+header img{
     height: 60%;
+    padding-right: 5%;
+}
+header h2 {
+    padding-right: 10px;
 }
 nav {
     display: none;
