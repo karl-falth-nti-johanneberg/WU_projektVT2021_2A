@@ -23,7 +23,7 @@ header {
     grid-area: he;
     background-color: orange;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
 }
@@ -33,9 +33,14 @@ header img{
 }
 header h2 {
     padding-right: 10px;
+    transition: opacity 1s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.menuVisible {
-    display: none;
+.menuButton {
+    opacity: 100%;
+}
+.menuInVisible {
+    opacity: 0%;
 }
 nav {
     display: none;
