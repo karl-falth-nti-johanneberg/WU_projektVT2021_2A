@@ -15,7 +15,11 @@ function toggleMenu(){
                 menuButton.style.display = "none"
             }
         })
-}, 100);
+    }, 100);
 }
-menuButton.addEventListener("click", toggleMenu)
-menuIcon.addEventListener("click", toggleMenu)
+[menuButton, menuIcon].forEach(item => {item.addEventListener("click", toggleMenu)})
+
+function headerResizer(){
+
+}
+document.addEventListener

@@ -3,6 +3,8 @@
     padding: 0;
     margin: 0;
     font-family: 'Comfortaa', cursive;
+    transition: all 350ms;
+    transition-timing-function: ease-in-out;
 }
 /* Mobil-css */
 body {
@@ -22,25 +24,29 @@ body {
 header {
     grid-area: he;
     background-color: orange;
+}
+.menu_wrapper {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    height: 100%;
     width: 100%;
 }
-header img{
+.menu_wrapper img{
     height: 60%;
     padding-right: 5%;
 }
-header h2 {
+.menu_wrapper h2 {
     padding-right: 10px;
-    transition: opacity 1s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .menuButton {
     opacity: 100%;
 }
 .menuInVisible {
     opacity: 0%;
+}
+.menuList {
+    list-style: none;
 }
 nav {
     display: none;
@@ -62,7 +68,7 @@ footer {
     padding-top: 0.5%;
 }
 #contact_us {
-    list-style: none ;
+    list-style: none;
 }
 /* Desktop och större skärmar */
 @media screen and (min-width: 992px) {
