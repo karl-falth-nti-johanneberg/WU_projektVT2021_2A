@@ -3,12 +3,13 @@
     padding: 0;
     margin: 0;
     font-family: 'Comfortaa', cursive;
-    transition: all 350ms;
-    transition-timing-function: ease-in-out;
+    transition: all 300ms;
+    color: white;
 }
 /* Mobil-css */
 body {
     height: 200vh;
+    background-color: rgb(50, 50, 80);
 }
 .wrapper {
     height: 100%;
@@ -17,52 +18,58 @@ body {
     grid-template-columns: 1fr;
     grid-template-areas:
     "he"
-    "as"
+    "na"
     "ma"
     "fo";
 }
 header {
     grid-area: he;
-    background-color: orange;
-}
-.menu_wrapper {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+}
+.mobilenav {
     height: 100%;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.menu_wrapper img{
-    height: 60%;
-    padding-right: 5%;
+.menuIcon {
+    height: 50%;
+    transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
 }
-.menu_wrapper h2 {
-    padding-right: 10px;
-}
-.menuButton {
-    opacity: 100%;
-}
-.menuInVisible {
-    opacity: 0%;
+.menuIcon.toggleMenu {
+    transform: scale(1.25);
 }
 .menuList {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
     list-style: none;
+    position: relative;
+    top: -200%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
 }
-nav {
-    display: none;
+.menuToggle {
+    position: relative;
+    top: 0px;
 }
 aside {
-    grid-area: as;
-    background-color: green;
+    display: none;
+}
+nav {
+    grid-area: na;
+    position: sticky;
+    top: -30px;
 }
 main {
     grid-area: ma;
-    background-color: cyan;
 }
 footer {
     grid-area: fo;
     display: flex;
-    background-color: hotpink;
     flex-direction: column;
     align-items: center;
     padding-top: 0.5%;
@@ -81,12 +88,14 @@ footer {
         "ma"
         "fo";
     }
-    nav {
-        grid-area: na;
-        display: block;
-        background-color: lightgray;
+    .menuList {
+        transform: scale(1.25);
     }
-    header img {
-        height: 80%;
+    .menuIcon {
+        height: 65%;
+    }
+    aside {
+        grid-area: as;
+        display: initial;
     }
 }
