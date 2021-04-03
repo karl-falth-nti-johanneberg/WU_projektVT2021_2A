@@ -1,7 +1,7 @@
 // const menuButton = document.querySelector(".menuButton")
 const menuList = document.querySelector(".menuList")
 const menuIcon = document.querySelector(".menuIcon")
-
+const menuNav = document.querySelector(".menuNav")
 // function toggleMenu(){
 //     if (menuButton.style.display == "none") {
 //         menuButton.style.display = "initial";}
@@ -20,8 +20,16 @@ const menuIcon = document.querySelector(".menuIcon")
 //                 menuList.style.display = "none"}})
 //     }, 1)
 // }
-function toggleMenu(){
+
+menuIcon.addEventListener("click",function toggleMenu(){
     menuList.classList.toggle("menuToggle")
     menuIcon.classList.toggle("toggleMenu")
-}
-[menuIcon].forEach(item => {item.addEventListener("click", toggleMenu)})
+})
+window.addEventListener("scroll", function scrollCheck(){
+    if(window.pageYOffset > 0) {
+        menuNav.classList.add("scrolled")
+    }
+    else {
+        menuNav.classList.remove("scrolled")
+    }
+})
