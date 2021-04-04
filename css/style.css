@@ -136,6 +136,9 @@ main {
     list-style-position: inside;
     width: 70%;
 }
+#FAQMain ul li {
+    margin: 20px 0 20px 0;
+}
 .textBox {
     display: flex;
     flex-direction: column;
@@ -172,7 +175,6 @@ footer h2 {
     overflow: hidden;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 10px;
 }
 table, th, td {
     margin: 10px 0 10px 0;
@@ -182,13 +184,14 @@ table, th, td {
     font-size: 7px;
 }
 table {
+    transform: scale(0.9);
     margin: auto;
 }
 .noBorder {
     display: none;
 }
 span {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
 }
 
