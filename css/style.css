@@ -71,6 +71,7 @@ header h2 {
     text-align: center;
 }
 .menuNav {
+    border-bottom: solid rgba(0, 0, 0, 0.3) 3px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -97,12 +98,11 @@ header h2 {
     gap: 5px;
     overflow: hidden;
     width: 50%;
-    
     list-style: none;
     position: relative;
     top: -200%;
-    margin: 10px;
-    padding: 20px;
+    margin: 5px;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.15);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
@@ -150,45 +150,59 @@ main {
     align-items: center;
     gap: 40px;
 }
-main img {
+main video {
+    margin: 8px;
+    box-sizing: border-box;
     width: 80%;
-    border-radius: 15px;
-    border: solid 2px;
+    border-radius: 10px;
+    border: solid 3px;
 }
 footer {
     grid-area: fo;
+    border-top: solid rgba(0, 0, 0, 0.3) 3px;
+    background-color: rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-#contact_us {
-    list-style: none;
+#contactUs {
+    list-style-position: inside;
 }
 footer h2 {
+    margin-right: 25px;
     padding-bottom: 10px;
 }
 .rankMainWrap {
-    display: flex;
     height: 100%;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: space-evenly;
+    max-width: 98vw;
+    box-sizing: border-box;
 }
+/* .rankMainWrap h1, h2, p {
+    position: sticky;
+    left: 0px;
+}
+.rankMainWrap article {
+    overflow-y: hidden;
+    overflow-x: visible;
+} */
 table, th, td {
-    margin: 10px 0 10px 0;
+    margin: 5px 0 5px 0;
     border: 2px solid white;
     border-radius: 3px;
     padding: 3px;
-    font-size: 7px;
+    font-size: 15px;
 }
 table {
     display: block;
     z-index: 0;
     transform: scale(0.9);
-    margin: auto;
+    overflow-y: hidden;
+    overflow-x: visible;
 }
 .noBorder {
     display: none;
+
 }
 span {
     font-size: 13px;
@@ -254,29 +268,32 @@ span {
         text-align: center;
     }
     .textBox {
+        margin-top: 100px;
         display: inline-flex;
         flex-direction: column;
-        margin-left: 10px;
         width: 40%;
     }
     .hemWrap {
         display: initial;
     }
-    main {
-        display: block;
-    }
+    /* main {
+        display: initial;
+    } */
     #FAQMain ul {
         font-size: large;
     }
     .rankMainWrap {
         margin: 10px;
-        box-sizing: border-box;
         font-size: 25px;
     }
-    main img {
+    main video {
         width: 50%;
-        margin-right: 10px;
         float: right;
+    }
+    table {
+        display: block;
+        width: max-content;
+        margin: auto;
     }
     th, td {
         font-size: 17px;
@@ -285,6 +302,7 @@ span {
     .noBorder {
         border: none;
         display: initial;
+        float: right;
         width: 30%;
     }
     span {
